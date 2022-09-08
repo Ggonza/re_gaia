@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+.loginpage{
+  height: 100vh;
+  padding-top: 2vh;
+  background-image: radial-gradient( circle farthest-corner at 14.2% 24%,  rgba(239,61,78,1) 0%, rgba(239,61,78,0.81) 51.8%, rgba(239,61,78,0.63) 84.6% );
+  .gaia{
+    font-size: 3em;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    text-shadow: 4px 6px 10px #CE5937;
+  }
+}
+.loginUser{
+
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content{
+    font-family: 'Rubik', sans-serif;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    box-shadow: 0px 0px 20px 0px black;
+  }
+}
