@@ -1,10 +1,13 @@
 import React from 'react';
-import { Navigation } from "./routes"
-import{ToastContainer} from "react-toastify"
-export default function App(){
-    return(
-        <div>
+import {Navigation} from "./routes"
+import {ToastContainer} from "react-toastify"
+import {AuthUser} from "./context";
+
+export default function App() {
+    return (
+        <AuthUser>
             <Navigation/>
+
             <ToastContainer
                 position="bottom-center"
                 autoClose="5000"
@@ -15,6 +18,6 @@ export default function App(){
                 draggable
                 pauseOnHover={false}
             />
-        </div>
+        </AuthUser>
     );
 }

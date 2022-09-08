@@ -4,9 +4,11 @@ import {useFormik} from "formik";
 import * as Yup from "yup";
 import {toast} from "react-toastify";
 import {loginAPI} from "../../api/auth";
+import {useAuth} from "../../hooks";
 import "./images/gaia.png";
 
 export function LoginUsers() {
+    const {login} = useAuth();
     const formik = useFormik({
         initialValues: initialValues(),
         validationSchema: Yup.object(validationSchema()),
@@ -14,7 +16,7 @@ export function LoginUsers() {
             try {
                 const response = await loginAPI(formValue);
                 const {access} = response;
-                console.log(access);
+                login(access);
             } catch (e) {
                 toast.error(e.message);
             }
@@ -27,11 +29,11 @@ export function LoginUsers() {
                     <Form className="login-form loginUser__content" onSubmit={formik.handleSubmit}>
                         <h2 id="ingresaText" className="text-center">INGRESAR</h2>
                         <Form.Input type="text" name="username" className="col mt-4" placeholder="Usuario"
-                               value={formik.values.user} onChange={formik.handleChange} error={formik.errors.user}/>
+                               value={formik.values.username} onChange={formik.handleChange} error={formik.errors.user}/>
                         <Form.Input type="password" name="password" className="mt-2" placeholder="Contraseña"
                                value={formik.values.password} onChange={formik.handleChange} error={formik.errors.password}/>
                         <Button type="submit" className="mt-4 col-6 " color="google plus" content="Ingresar" />
-                        <a className="d-flex justify-content-center mt-4" href="">Recuperar Contraseña</a>
+                        <a className="d-flex justify-content-center mt-4" href="*">Recuperar Contraseña</a>
                     </Form>
             </div>
 
