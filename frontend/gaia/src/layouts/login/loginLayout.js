@@ -1,16 +1,29 @@
 import React from 'react';
-import {LoginUsers} from "../../pages/login";
 import {useAuth} from "../../hooks";
 import "./loginLayout.scss"
+import {ProfesorLayout} from "../profesorLayout";
+import {ChefLayout} from "../chefLayout";
+import { Navigate } from "react-router-dom";
 
 export function LoginLayout(props) {
     const {children} = props;
     const {auth} = useAuth();
-    if (!auth) return <LoginUsers/>;
-    return (
-        <div>
+    const aa = auth;
 
-            {children}
-        </div>
-    );
+    if (auth == null || !auth) {
+        return (
+            <div>
+                {children}
+            </div>
+        );
+    } else {
+        //retorna a la pagina de admin
+        if (aa.me.role === "ADMIN") return (
+            <Navigate replace to= "/admin" />
+        )
+        //retorna a la pagina de profesor
+        if (aa.me.role === "PROFESOR") return <ProfesorLayout/>;
+        //retorna a la pagina de cocinero
+        if (aa.me.role === "CHEF") return <ChefLayout/>;
+    }
 }
