@@ -1,6 +1,6 @@
 import React, {useState, createContext, useEffect} from "react";
 import {setToken, getToken, removeToken} from "../api/token";
-import {userUser} from "../hooks";
+import {UseUser} from "../hooks";
 
 export const AuthContext = createContext({
     auth: undefined,
@@ -13,7 +13,7 @@ export function AuthProvider(props){
     const {children} = props;
     const [auth, setAuth] = useState(undefined);
     const [role, setRole] = useState(undefined);
-    const {getMe} = userUser();
+    const {getMe} = UseUser();
 
 
     useEffect(() => {
