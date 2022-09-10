@@ -1,7 +1,7 @@
 import React from 'react';
 import "./adminLayout.scss"
 import {useAuth} from "../../hooks";
-import {TopMenu} from "../../components/adminComponents";
+import {TopMenu, SideMenu} from "../../components/adminComponents";
 import {LoginUsers} from "../../pages/login";
 
 export function AdminLayout(props) {
@@ -10,6 +10,9 @@ export function AdminLayout(props) {
     const {children} = props;
 
     if (!auth) return <LoginUsers/>
+    if (auth.me.role !== "ADMIN"){
+        logout();
+    }
     return (
         <div className="admin-layout">
             <div className="admin-layout__menu">
@@ -17,8 +20,9 @@ export function AdminLayout(props) {
 
             </div>
             <div className="admin_layout__main-content">
-                <button onClick={logout}>CERRAR SESION</button>
-                {children}
+                <SideMenu>
+                    {children}
+                </SideMenu>
             </div>
 
         </div>

@@ -21,9 +21,14 @@ export function LoginLayout(props) {
         if (aa.me.role === "ADMIN") return (
             <Navigate replace to= "/admin" />
         )
-        //retorna a la pagina de profesor
-        if (aa.me.role === "PROFESOR") return <ProfesorLayout/>;
-        //retorna a la pagina de cocinero
-        if (aa.me.role === "CHEF") return <ChefLayout/>;
+       //retorna a la pagina de profesor
+        if (aa.me.role === "PROFESOR") return (
+            <Navigate replace to= "/profesor" />
+        )
+       //retorna a la pagina de chef
+        if (aa.me.role === "CHEF") return (
+            <Navigate replace to= "/chef" />
+        )
+
     }
 }
