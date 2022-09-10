@@ -1,3 +1,5 @@
 export * from "./home"
 export * from "./mgmntUsers/mgmtStudents"
 export * from "./mgmntUsers/mgmtWorkers"
+export * from "./mgmtDinning/mgmtProduction"
+export * from "./mgmtDinning/mgmtResiduals"

@@ -39,12 +39,12 @@ function MenuLeft(props) {
             </Menu.Item>
             {/*----*/}
             <Divider horizontal>Gestion Comedor</Divider>
-            <Menu.Item as={Link} to={"/admin/production/management"}
-                       active={pathname === "/admin/production/management"}>
+            <Menu.Item as={Link} to={"/admin/management/kitchen"}
+                       active={pathname === "/admin/management/kitchen"}>
                 <Icon name="utensils"/> Registros Produccion
             </Menu.Item>
-            <Menu.Item as={Link} to={"/admin/production/management"}
-                       active={pathname === "/admin/production/management"}>
+            <Menu.Item as={Link} to={"/admin/management/residuals"}
+                       active={pathname === "/admin/management/residuals"}>
                 <Icon name="trash"/> Registros Desperdicios
             </Menu.Item>
 
