@@ -6,26 +6,24 @@ import "./tableUsers.scss";
 export function TableUsers(props) {
     const {users} = props;
     return (
-        <Table className="table-users-admin">
+        <Table celled className="table-users-admin">
             <Table.Header>
                 <Table.Row>
-                    <Table.HeaderCell>Usuario</Table.HeaderCell>
-                    <Table.HeaderCell>Nombres</Table.HeaderCell>
-                    <Table.HeaderCell>Apellidos</Table.HeaderCell>
-                    <Table.HeaderCell>Email</Table.HeaderCell>
-                    <Table.HeaderCell>??</Table.HeaderCell>
-                    <Table.HeaderCell>Acciones</Table.HeaderCell>
+                    <Table.HeaderCell width="3">Usuario</Table.HeaderCell>
+                    <Table.HeaderCell width="3">Nombres</Table.HeaderCell>
+                    <Table.HeaderCell width="3">Apellidos</Table.HeaderCell>
+                    <Table.HeaderCell width="4">Email</Table.HeaderCell>
+                    <Table.HeaderCell width="2">Acciones</Table.HeaderCell>
                 </Table.Row>
             </Table.Header>
             <Table.Body>
                 {map(users, (user, index) => (
                     <Table.Row key={index}>
-                        <Table.Cell>{user.username}</Table.Cell>
+                        <Table.Cell width="2">{user.username}</Table.Cell>
                         <Table.Cell>{user.first_name}</Table.Cell>
                         <Table.Cell>{user.last_name}</Table.Cell>
                         <Table.Cell>{user.email}</Table.Cell>
-                        <Table.Cell>{user.role}</Table.Cell>
-                        <Actions user={user}/>
+                        <Actions width="2" user={user}/>
                     </Table.Row>
                 ))}
             </Table.Body>

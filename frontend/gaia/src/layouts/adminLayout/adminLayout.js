@@ -1,7 +1,7 @@
 import React from 'react';
 import "./adminLayout.scss"
 import {useAuth} from "../../hooks";
-import {TopMenu, SideMenu} from "../../components/adminComponents";
+import {TopMenu, SideMenu} from "../../components";
 import {LoginUsers} from "../../pages/login";
 
 export function AdminLayout(props) {
@@ -9,8 +9,7 @@ export function AdminLayout(props) {
     const {auth} = useAuth();
     const {children} = props;
 
-    if (!auth) return <LoginUsers/>
-    if (auth.me.role !== "ADMIN"){
+    if (auth.me.role !== "b126eb44-314b-11ed-a96b-7bf2e9fa866a"){
         logout();
     }
     return (
