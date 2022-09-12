@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e30567a-e612-48d7-9b4a-a186c9c08b45" name="Changes" comment="retorno de datos en form">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a823d3c-2cf9-4c99-a638-34391ef4dd8f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a823d3c-2cf9-4c99-a638-34391ef4dd8f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0a823d3c-2cf9-4c99-a638-34391ef4dd8f/storage_v2/_src_/database/ga-dev.oggwtQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0a823d3c-2cf9-4c99-a638-34391ef4dd8f/storage_v2/_src_/database/ga-dev.oggwtQ/schema/public.abK9xQ.meta" afterDir="false" />
+    <list default="true" id="0e30567a-e612-48d7-9b4a-a186c9c08b45" name="Changes" comment="actualizacion admin v3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gaia/src/api/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/gaia/src/api/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gaia/src/components/adminComponents/formAddEditUser/formAddEditUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/gaia/src/components/adminComponents/formAddEditUser/formAddEditUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gaia/src/components/userComponent/tableUsers/tableUsers.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/gaia/src/components/userComponent/tableUsers/tableUsers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gaia/src/hooks/userUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/gaia/src/hooks/userUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gaia/src/pages/admin/mgmntUsers/mgmtStudents.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/gaia/src/pages/admin/mgmntUsers/mgmtStudents.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/re_gaia/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/re_gaia/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/re_gaia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/re_gaia/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/api/router.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/router.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/api/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/api/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +104,8 @@
       <updated>1662658773126</updated>
       <workItem from="1662658775290" duration="40618000" />
       <workItem from="1662749059590" duration="88114000" />
-      <workItem from="1662904772308" duration="24277000" />
+      <workItem from="1662904772308" duration="26169000" />
+      <workItem from="1662987779587" duration="5902000" />
     </task>
     <task id="LOCAL-00001" summary="configuracions para Login y authenticacion + token de usuarios">
       <created>1662676964932</created>
@@ -160,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662869114313</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="actualizacion admin v3">
+      <created>1662942842249</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1662942842249</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +192,7 @@
     <MESSAGE value="actualizacion admin panel v1.4" />
     <MESSAGE value="admin tables-modals-forms creados" />
     <MESSAGE value="retorno de datos en form" />
-    <option name="LAST_COMMIT_MESSAGE" value="retorno de datos en form" />
+    <MESSAGE value="actualizacion admin v3" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion admin v3" />
   </component>
 </project>
