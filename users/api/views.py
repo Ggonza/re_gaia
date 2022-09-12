@@ -7,27 +7,36 @@ from users.api.serializers import customUserSerializer
 
 from users.models import customUser
 
-class  customUserApiViewSet(ModelViewSet):
+
+class customUserApiViewSet(ModelViewSet):
     permission_classes = [IsAdminUser]
     serializer_class = customUserSerializer
     queryset = customUser.objects.all()
 
     def create(self, request, *args, **kwargs):
         request.data['password'] = make_password(request.data['password'])
-        return super().create(request,*args,**kwargs)
+        return super().create(request, *args, **kwargs)
 
-    def update(self, request, *args, **kwargs):
-        password = request.data['password']
+    def partial_update(self, request, *args, **kwargs):
         kwargs['partial'] = True
+        password = request.data.get('password')
+
+        print("CREATE PATCH: ", request.data)
+        print("CREATE ARGS: ", kwargs.get('pk'))
         if password:
             request.data['password'] = make_password(password)
         else:
-            request.data['password'] = request.customUser.password
+            request.data['password'] = request.user.password
+        return super().partial_update(request, *args, **kwargs)
 
-        return super().update(request, *args, **kwargs)
 
 class customUserView(APIView):
     permission_classes = [IsAuthenticated]
+
     def get(self, request):
+        serializer = customUserSerializer(request.user)
+        return Response(serializer.data)
+
+    def post(self, request):
         serializer = customUserSerializer(request.user)
         return Response(serializer.data)

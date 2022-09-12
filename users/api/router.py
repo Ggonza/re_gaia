@@ -6,10 +6,10 @@ from users.api.views import customUserApiViewSet, customUserView
 
 router_user = DefaultRouter()
 router_user.register(
-    prefix='customUser', basename='customUser',viewset=customUserApiViewSet
+    prefix='customUser', basename='customUser', viewset=customUserApiViewSet
 )
 
 urlpatterns = [
-    path('auth/me/',customUserView.as_view()),
-    path('auth/login/',TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path('auth/me/', customUserView.as_view()),
+    path('auth/login/', TokenObtainPairView.as_view(), name="token_obtain_pair"),
 ]
