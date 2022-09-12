@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {getMeApi, getUsersApi} from "../api/auth";
+import {getMeApi, getUsersApi, addUserApi, updateUserApi} from "../api/auth";
 import {useAuth} from ".";
 
 export function UseUser() {
@@ -17,17 +17,42 @@ export function UseUser() {
         }
     };
 
-    const getUsers = async () =>{
+    //MUESTRA USUARIOS
+    const getUsers = async () => {
         try {
             setLoading(true);
             const response = await getUsersApi(auth.token);
             setLoading(false);
             setUsers(response);
-        }catch (e) {
+        } catch (e) {
             setLoading(false);
             setError(e);
         }
     };
+    // AGREGA USUARIOS
+    const addUser = async (data) => {
+        try {
+            setLoading(true);
+            await addUserApi(data, auth.token);
+            setLoading(false);
+        } catch (e) {
+            setLoading(false);
+            setError(e)
+            console.log("ERROR", e)
+        }
+    }
+    //ACTUALIZA USUARIOS
+    const updateUser = async (id, data) =>{
+        try {
+            setLoading(true);
+            await updateUserApi(id, data, auth.token);
+            setLoading(false);
+        }catch (e) {
+            setLoading(false);
+            setError(e);
+        }
+    }
+
 
     return {
         loading,
@@ -35,5 +60,7 @@ export function UseUser() {
         users,
         getMe,
         getUsers,
+        addUser,
+        updateUser,
     };
 }

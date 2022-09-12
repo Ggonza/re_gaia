@@ -2,17 +2,28 @@ import React from 'react';
 import {Button, Form, Label} from "semantic-ui-react";
 import {useFormik} from "formik";
 import * as Yup from "yup";
+import {UseUser} from "../../../hooks";
 import "./formAddEditUser.scss";
 
 
-export function FormAddEditUser() {
+export function FormAddEditUser(props) {
+    const {onClose, onRefetch, user} = props;
+    const {addUser, updateUser} = UseUser();
     const formik = useFormik({
-        initialValues: initialValues(),
-        validationSchema: Yup.object(newSchema()),
+        initialValues: initialValues(user),
+        validationSchema: Yup.object(user ? updateSchema() : newSchema()),
         validateOnChange: false,
-        onSubmit: (formValue) => {
-            console.log("FORM ENVIADO");
-            console.log(formValue);
+        onSubmit: async (formValue) => {
+            try {
+                if (user) updateUser(user.id, formValue);
+
+                else await addUser(formValue);
+
+                onRefetch();
+                onClose();
+            } catch (e) {
+                console.error(e);
+            }
         }
     });
 
@@ -49,8 +60,9 @@ export function FormAddEditUser() {
                 />
                 <Form.Select
                     name="role" label="Seleccionar rol de usuario" options={roleOptions}
-                    error={formik.errors.role} onChange={(_, data) => {
-                        formik.setFieldValue('role', data.selection)
+                    error={formik.errors.role}
+                    onChange={(_, data) => {
+                        formik.setFieldValue('role', data.value)
                     }}
                 />
             </Form.Group>
@@ -64,21 +76,21 @@ export function FormAddEditUser() {
                     }}/>
             </Form.Group>
 
-            <Button type="submit" primary fluid content="CREAR"/>
+            <Button type="submit" primary fluid content={user ? "ACTUALIZAR" : "CREAR"}/>
 
         </Form>
     );
 }
 
-function initialValues() {
+function initialValues(user) {
     return {
-        first_name: "",
-        last_name: "",
-        username: "",
-        email: "",
-        is_active: true,
+        first_name: user?.first_name || "",
+        last_name: user?.last_name || "",
+        username: user?.username || "",
+        email: user?.email || "",
+        role: user?.role || "",
+        is_active: !!user?.is_active,
         password: "",
-        role: "",
     }
 }
 
@@ -91,5 +103,17 @@ function newSchema() {
         is_active: Yup.bool(),
         password: Yup.string().required(true),
         role: Yup.string(),
-    }
+    };
+}
+
+function updateSchema() {
+    return {
+        first_name: Yup.string().required(true),
+        last_name: Yup.string().required(true),
+        username: Yup.string().required(true),
+        email: Yup.string().email(true).required(true),
+        is_active: Yup.bool(),
+        password: Yup.string(),
+        role: Yup.string(),
+    };
 }

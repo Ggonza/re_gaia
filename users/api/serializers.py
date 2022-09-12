@@ -3,6 +3,8 @@ from users.models import customUser
 from data.models import Students
 
 class customUserSerializer(serializers.ModelSerializer):
+    id = serializers.ReadOnlyField()
+
     class Meta:
         model = customUser
         fields = ['id','username','email','first_name',
