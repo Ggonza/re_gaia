@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0e30567a-e612-48d7-9b4a-a186c9c08b45" name="Changes" comment="actualizacion admin v3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/gaia/src/components/adminComponents/formAddEditUser/formAddEditUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/gaia/src/components/adminComponents/formAddEditUser/formAddEditUser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +107,7 @@
       <workItem from="1662749059590" duration="88114000" />
       <workItem from="1662904772308" duration="26169000" />
       <workItem from="1662987779587" duration="5902000" />
+      <workItem from="1663000943683" duration="2569000" />
     </task>
     <task id="LOCAL-00001" summary="configuracions para Login y authenticacion + token de usuarios">
       <created>1662676964932</created>
@@ -156,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662942842249</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="actualizacion admin v3">
+      <created>1663001013558</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1663001013558</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
