@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e30567a-e612-48d7-9b4a-a186c9c08b45" name="Changes" comment="actualizacion admin v3">
+    <list default="true" id="0e30567a-e612-48d7-9b4a-a186c9c08b45" name="Changes" comment="formato original">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/gaia/src/components/adminComponents/formAddEditUser/formAddEditUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/gaia/src/components/adminComponents/formAddEditUser/formAddEditUser.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="adminControl" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,12 +49,18 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/gonza&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/gonza/Desktop/re_gaia&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PyCharm 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;mysql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -107,7 +114,9 @@
       <workItem from="1662749059590" duration="88114000" />
       <workItem from="1662904772308" duration="26169000" />
       <workItem from="1662987779587" duration="5902000" />
-      <workItem from="1663000943683" duration="2569000" />
+      <workItem from="1663000943683" duration="9690000" />
+      <workItem from="1663284464569" duration="722000" />
+      <workItem from="1663460545544" duration="350000" />
     </task>
     <task id="LOCAL-00001" summary="configuracions para Login y authenticacion + token de usuarios">
       <created>1662676964932</created>
@@ -165,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663001013558</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="formato original">
+      <created>1663004936060</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1663004936060</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,6 +218,7 @@
     <MESSAGE value="admin tables-modals-forms creados" />
     <MESSAGE value="retorno de datos en form" />
     <MESSAGE value="actualizacion admin v3" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizacion admin v3" />
+    <MESSAGE value="formato original" />
+    <option name="LAST_COMMIT_MESSAGE" value="formato original" />
   </component>
 </project>
