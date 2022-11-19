@@ -108,7 +108,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ga-dev',
         'USER': 'gaiaOwner',
-        'PASSWORD': '123456',
+        'PASSWORD': '#123456',
         'HOST': 'localhost',
         'PORT': '5432',
     }

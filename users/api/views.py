@@ -9,9 +9,9 @@ from users.models import customUser
 
 
 class customUserApiViewSet(ModelViewSet):
+    queryset = customUser.objects.all()
     permission_classes = [IsAdminUser]
     serializer_class = customUserSerializer
-    queryset = customUser.objects.all()
 
     def create(self, request, *args, **kwargs):
         request.data['password'] = make_password(request.data['password'])

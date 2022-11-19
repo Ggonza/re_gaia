@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Django default" uuid="0a823d3c-2cf9-4c99-a638-34391ef4dd8f">
+    <data-source source="LOCAL" name="Django default" uuid="de5a3051-6167-4e67-a902-71e549ee9c3e">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
